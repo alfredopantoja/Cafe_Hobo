@@ -1,0 +1,12 @@
+<li>
+	<h2 class="title"><%= blog_post.title %></h2>
+	<p class="body"><%= blog_post.body %></p>
+	<p class="timestamp">
+		Posted <%= time_ago_in_words(blog_post.created_at) %> ago.
+	</p>
+	<% if current_user?(blog_post.user) %>
+		<%= link_to "delete", blog_post, method: :delete,
+										 data: { confirm: "You sure?" },
+										 title: blog_post.title %>
+	<% end %>
+</li>

@@ -8,4 +8,12 @@
 			</h1>
 		</section>
 	</aside>
+	<div class="span8">
+		<% if @user.blog_posts.any? %>
+			<ul class="blog-posts">
+				<%= render @blog_posts %>
+			</ul>
+			<%= will_paginate @blog_posts %>
+		<% end %>
+	</div>
 </div>

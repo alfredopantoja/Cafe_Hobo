@@ -9,4 +9,11 @@ FactoryGirl.define do
       admin true
     end
   end
+
+  factory :blog_post do
+  	title     "Blog Post Title"
+  	body      "Loren Ipsum"
+  	image_url "blog_image.jpg"
+  	user
+  end
 end
