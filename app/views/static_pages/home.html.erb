@@ -26,3 +26,15 @@
 	  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
 	</div>
 <% end %>
+    <h1>Portfolio Sites</h1>
+	<div class="span8">
+		<% @portfolio_sites.each do |portfolio_site| %>
+		  <ul>
+		    <li><%= portfolio_site.name %></li>
+		    <li><%= portfolio_site.description %></li>
+		    <li><%= portfolio_site.screenshot_url %></li>
+		    <li><%= portfolio_site.site_url %></li>
+		    <li><%= portfolio_site.order %></li>
+		  </ul>
+		<% end %>
+	</div>

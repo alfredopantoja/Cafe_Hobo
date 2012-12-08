@@ -3,6 +3,7 @@ class StaticPagesController < ApplicationController
   	if signed_in?
   	  @blog_post  = current_user.blog_posts.build 
   	  @feed_items = current_user.feed.paginate(page: params[:page])
+      @portfolio_sites = PortfolioSite.all
   	end
   end
 

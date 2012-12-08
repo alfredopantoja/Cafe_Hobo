@@ -1,0 +1,31 @@
+<h1>Listing portfolio_sites</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Screenshot url</th>
+    <th>Site url</th>
+    <th>Order</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @portfolio_sites.each do |portfolio_site| %>
+  <tr>
+    <td><%= portfolio_site.name %></td>
+    <td><%= portfolio_site.description %></td>
+    <td><%= portfolio_site.screenshot_url %></td>
+    <td><%= portfolio_site.site_url %></td>
+    <td><%= portfolio_site.order %></td>
+    <td><%= link_to 'Show', portfolio_site %></td>
+    <td><%= link_to 'Edit', edit_portfolio_site_path(portfolio_site) %></td>
+    <td><%= link_to 'Destroy', portfolio_site, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Portfolio site', new_portfolio_site_path %>

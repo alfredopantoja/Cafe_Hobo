@@ -1,4 +1,6 @@
 CafeHobo::Application.routes.draw do
+  resources :portfolio_sites
+
   resources :users
   resources :sessions,   only: [:new, :create, :destroy]
   resources :blog_posts, only: [:create, :destroy]

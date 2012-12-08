@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @portfolio_site.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @portfolio_site.description %>
+</p>
+
+<p>
+  <b>Screenshot url:</b>
+  <%= @portfolio_site.screenshot_url %>
+</p>
+
+<p>
+  <b>Site url:</b>
+  <%= @portfolio_site.site_url %>
+</p>
+
+<p>
+  <b>Order:</b>
+  <%= @portfolio_site.order %>
+</p>
+
+
+<%= link_to 'Edit', edit_portfolio_site_path(@portfolio_site) %> |
+<%= link_to 'Back', portfolio_sites_path %>
