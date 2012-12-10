@@ -1,0 +1,29 @@
+<h1>Listing codeschool_courses</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Image url</th>
+    <th>Order</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @codeschool_courses.each do |codeschool_course| %>
+  <tr>
+    <td><%= codeschool_course.name %></td>
+    <td><%= codeschool_course.description %></td>
+    <td><%= codeschool_course.image_url %></td>
+    <td><%= codeschool_course.order %></td>
+    <td><%= link_to 'Show', codeschool_course %></td>
+    <td><%= link_to 'Edit', edit_codeschool_course_path(codeschool_course) %></td>
+    <td><%= link_to 'Destroy', codeschool_course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Codeschool course', new_codeschool_course_path %>

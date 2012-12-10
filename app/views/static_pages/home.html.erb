@@ -27,14 +27,23 @@
 	</div>
 <% end %>
     <h1>Portfolio Sites</h1>
-	<div class="span8">
+	<div class="">
 		<% @portfolio_sites.each do |portfolio_site| %>
 		  <ul>
 		    <li><%= portfolio_site.name %></li>
 		    <li><%= portfolio_site.description %></li>
 		    <li><%= portfolio_site.screenshot_url %></li>
 		    <li><%= portfolio_site.site_url %></li>
-		    <li><%= portfolio_site.order %></li>
+		  </ul>
+		<% end %>
+	</div>
+	<h1>Codeschool Courses</h1>
+	<div class="">
+		<% @codeschool_courses.each do |codeschool_course| %>
+		  <ul>
+		    <li><%= codeschool_course.name %></li>
+		    <li><%= codeschool_course.description %></li>
+		    <li><%= image_tag(codeschool_course.image_url) %></li>
 		  </ul>
 		<% end %>
 	</div>

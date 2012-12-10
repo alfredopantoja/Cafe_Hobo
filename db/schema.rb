@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121207174810) do
+ActiveRecord::Schema.define(:version => 20121210152611) do
 
   create_table "blog_posts", :force => true do |t|
     t.string   "title"
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(:version => 20121207174810) do
   end
 
   add_index "blog_posts", ["user_id", "created_at"], :name => "index_blog_posts_on_user_id_and_created_at"
+
+  create_table "codeschool_courses", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "image_url"
+    t.integer  "order"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "portfolio_sites", :force => true do |t|
     t.string   "name"

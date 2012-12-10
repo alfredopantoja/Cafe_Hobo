@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @codeschool_course.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @codeschool_course.description %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @codeschool_course.image_url %>
+</p>
+
+<p>
+  <b>Order:</b>
+  <%= @codeschool_course.order %>
+</p>
+
+
+<%= link_to 'Edit', edit_codeschool_course_path(@codeschool_course) %> |
+<%= link_to 'Back', codeschool_courses_path %>

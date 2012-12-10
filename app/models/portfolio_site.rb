@@ -14,4 +14,6 @@
 
 class PortfolioSite < ActiveRecord::Base
   attr_accessible :description, :name, :order, :screenshot_url, :site_url
+
+  # default_scope order: 'portfolio_sites.order ASC'
 end

@@ -1,4 +1,6 @@
 CafeHobo::Application.routes.draw do
+  resources :codeschool_courses
+
   resources :portfolio_sites
 
   resources :users
